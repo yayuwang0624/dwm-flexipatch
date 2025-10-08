@@ -497,6 +497,7 @@ static const Rule rules[] = {
 	RULE(.class = "Emacs", .tags = 1 << 1, .switchtag = 1, .monitor = 0)
 	RULE(.class = "Google-chrome", .tags = 1 << 2, .switchtag = 1)
 	RULE(.class = "firefox", .tags = 1 << 2, .switchtag = 1, .monitor = 0)
+	RULE(.class = "zen", .tags = 1 << 2, .switchtag = 1, .monitor = 0)
 	RULE(.class = "netease-cloud-music", .tags = 1 << 6, .switchtag = 1)
 	RULE(.class = "sayonara", .tags = 1 << 6, .monitor = 1)
 	RULE(.class = "discord", .tags = 1 << 7, .monitor = 1)
@@ -719,7 +720,7 @@ static const Layout layouts[] = {
 	#if TILE_LAYOUT
 	{ "[]=",      tile },    /* first entry is default */
 	#endif
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	/* { "><>",      NULL },    /\* no layout function means floating behavior *\/ */
 	#if MONOCLE_LAYOUT
 	{ "[M]",      monocle },
 	#endif
