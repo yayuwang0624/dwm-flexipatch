@@ -717,13 +717,13 @@ static const Layout layouts[] = {
 #else
 static const Layout layouts[] = {
 	/* symbol     arrange function */
+	#if MONOCLE_LAYOUT
+	{ "[M]",      monocle },    /* first entry is default */
+	#endif
 	#if TILE_LAYOUT
-	{ "[]=",      tile },    /* first entry is default */
+	{ "[]=",      tile },
 	#endif
 	/* { "><>",      NULL },    /\* no layout function means floating behavior *\/ */
-	#if MONOCLE_LAYOUT
-	{ "[M]",      monocle },
-	#endif
 	#if BSTACK_LAYOUT
 	{ "TTT",      bstack },
 	#endif
