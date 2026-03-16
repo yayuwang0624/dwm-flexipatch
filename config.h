@@ -496,7 +496,7 @@ static const Rule rules[] = {
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "Emacs", .tags = 1 << 1, .switchtag = 1, .monitor = 0)
 	RULE(.class = "Google-chrome", .tags = 1 << 2, .switchtag = 1)
-	RULE(.class = "firefox", .tags = 1 << 2, .switchtag = 1, .monitor = 0)
+	RULE(.class = "firefox", .tags = 1 << 2, .switchtag = 1, .monitor = 1)
 	RULE(.class = "zen", .tags = 1 << 2, .switchtag = 1, .monitor = 0)
 	RULE(.class = "netease-cloud-music", .tags = 1 << 6, .switchtag = 1)
 	RULE(.class = "sayonara", .tags = 1 << 6, .monitor = 1)
