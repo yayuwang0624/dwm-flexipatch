@@ -717,8 +717,8 @@ static const Layout layouts[] = {
 #else
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	#if MONOCLE_LAYOUT
-	{ "[M]",      monocle },    /* first entry is default */
+    #if MONOCLE_LAYOUT
+	{ "[M]",      monocle },
 	#endif
 	#if TILE_LAYOUT
 	{ "[]=",      tile },
@@ -1080,7 +1080,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
 	// { MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,          togglefloating,         {0} },
-	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
+	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[1]} },
 	#if COLUMNS_LAYOUT
 	{ MODKEY,                       XK_c,          setlayout,              {.v = &layouts[3]} },
 	#endif // COLUMNS_LAYOUT
@@ -1306,7 +1306,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                                  6)
 	TAGKEYS(                        XK_8,                                  7)
 	TAGKEYS(                        XK_9,                                  8)
-	{ MODKEY,                       XK_Print,      spawn,                 SHCMD("flameshot gui") },
+	{ MODKEY,                       XK_Print,      spawn,                 SHCMD("Snipaste snip -o clipboard") },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn,       SHCMD("pactl set-sink-volume 0 +2%") },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn,       SHCMD("pactl set-sink-volume 0 -2%") },
 };
