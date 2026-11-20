@@ -500,6 +500,7 @@ static const Rule rules[] = {
 	RULE(.class = "zen", .tags = 1 << 2, .switchtag = 1, .monitor = 0)
 	RULE(.class = "netease-cloud-music", .tags = 1 << 6, .switchtag = 1)
 	RULE(.class = "sayonara", .tags = 1 << 6, .monitor = 1)
+	RULE(.class = "tauonmb", .tags = 1 << 6, .monitor = 1)
 	RULE(.class = "discord", .tags = 1 << 7, .monitor = 1)
 	RULE(.class = "Slack", .tags = 1 << 7, .monitor = 1)
 	#if RENAMED_SCRATCHPADS_PATCH
@@ -1145,8 +1146,11 @@ static const Key keys[] = {
 	#endif // SCRATCHPAD_ALT_1_PATCH
 	{ MODKEY|ControlMask,           XK_Left,       focusmon,               {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_Right,      focusmon,               {.i = +1 } },
+    { MODKEY|ControlMask,           XK_h,          focusmon,               {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_l,          focusmon,               {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_Tab,        focusmon,               {.i = +1 } },
 	{ MODKEY,                       XK_slash,      spawn,                  SHCMD("notify-send --icon='~/.config/dunst/monitor.png' --urgency low Monitor") },
+	{ MODKEY,                       XK_BackSpace,  spawn,                  SHCMD("dunstctl close") },
 	{ MODKEY|ShiftMask|ControlMask, XK_Left,       tagmon,                 {.i = -1 } },
 	{ MODKEY|ShiftMask|ControlMask, XK_Right,      tagmon,                 {.i = +1 } },
 	#if FOCUSADJACENTTAG_PATCH
